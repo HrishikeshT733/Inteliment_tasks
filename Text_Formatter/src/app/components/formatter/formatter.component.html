@@ -1,0 +1,60 @@
+<div class="formatters-container">
+  
+  
+    <h3>Text Formatters</h3>
+  
+  <div class="formatters-section">
+   
+    <div class="button-group">
+      <button class="btn-formatter" (click)="removeWhiteSpace()">
+        Remove White-space
+      </button>
+      <button class="btn-formatter" (click)="reverseAll()">
+        Reverse All
+      </button>
+      <button class="btn-formatter" (click)="removeSpecialChars()">
+        Remove Special Char
+      </button>
+      <button class="btn-formatter" (click)="capitalizeWord()">
+        Capitalize Word
+      </button>
+      <button class="btn-formatter btn-warning" (click)="removeStyling()">
+        Remove Styling
+      </button>
+    </div>
+  </div>
+
+  <div class="formatters-section">
+    <h4>Text Styling</h4>
+    <div class="button-group">
+      <button class="btn-style" (click)="toggleBold()">
+        <strong>B</strong>
+      </button>
+      <button class="btn-style" (click)="toggleItalic()">
+        <em>I</em>
+      </button>
+      <button class="btn-style" (click)="toggleUnderline()">
+        <u>U</u>
+      </button>
+      
+      <div class="color-picker">
+        <label for="colorPicker">Color:</label>
+        <input 
+          type="color" 
+          id="colorPicker" 
+          [value]="selectedColor"
+          (change)="changeColor($any($event.target).value)"
+          class="color-input"
+        >
+      </div>
+      
+      <div class="font-size-controls">
+        <button class="btn-size" (click)="decreaseFontSize()">-</button>
+        <span class="font-size-label">Font Size</span>
+        <button class="btn-size" (click)="increaseFontSize()">+</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>

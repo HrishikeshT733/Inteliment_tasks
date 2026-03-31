@@ -1,0 +1,39 @@
+<div class="text-display-container">
+  <div class="input-section">
+    <h3>Input Text</h3>
+    <textarea 
+      [(ngModel)]="inputText"
+      (input)="onTextInput($event)"
+      placeholder="Type your text here..."
+      rows="6"
+      class="text-input"
+    ></textarea>
+    
+    <div class="counters">
+      <div class="counter">
+        <span class="counter-label">Word Count:</span>
+        <span class="counter-value">{{ wordCount }}</span>
+      </div>
+      <div class="counter">
+        <span class="counter-label">Character Count:</span>
+        <span class="counter-value">{{ charCount }}</span>
+      </div>
+    </div>
+    
+    <button class="btn-clear" (click)="clearAll()">Clear All</button>
+  </div>
+  
+  <div class="output-section">
+    <h3>Output Text</h3>
+    <div 
+      class="output-text"
+      [style.fontWeight]="formatting.isBold ? 'bold' : 'normal'"
+      [style.fontStyle]="formatting.isItalic ? 'italic' : 'normal'"
+      [style.textDecoration]="formatting.isUnderline ? 'underline' : 'none'"
+      [style.color]="formatting.color"
+      [style.fontSize.px]="formatting.fontSize"
+    >
+      {{ outputText }}
+    </div>
+  </div>
+</div>
