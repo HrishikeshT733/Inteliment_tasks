@@ -1,11 +1,23 @@
 <div class="formatters-container">
   
   
-    <h3>Text Formatters</h3>
+   <div class="counters">
+      <div class="counter">
+        <span class="counter-label">Word Count:</span>
+        <span class="counter-value">{{ wordCount }}</span>
+      </div>
+      <div class="counter">
+        <span class="counter-label">Character Count:</span>
+        <span class="counter-value">{{ charCount }}</span>
+      </div>
+    </div>
   
   <div class="formatters-section">
    
     <div class="button-group">
+       <button class="btn-formatter" (click)="clearAll()">
+        Clear All
+      </button>
       <button class="btn-formatter" (click)="removeWhiteSpace()">
         Remove White-space
       </button>

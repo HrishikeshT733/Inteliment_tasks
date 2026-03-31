@@ -16,7 +16,7 @@ h3 {
 }
 
 .text-input {
-  width: 95%;
+  width: 95.5%;
   padding: 12px;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
@@ -72,10 +72,12 @@ h3 {
 
 .output-text {
   min-height: 150px;
-  padding: 15px;
+  padding: 12px;
   background: #f8f9fa;
   border-radius: 8px;
   border: 2px solid #e0e0e0;
   word-wrap: break-word;
   transition: all 0.3s;
+    white-space: pre-wrap;
+
 }

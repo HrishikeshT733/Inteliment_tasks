@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TextService } from '../../services/text.service';
 import { FormattingService } from '../../services/formatting.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-formatters',
@@ -14,7 +15,18 @@ import { FormattingService } from '../../services/formatting.service';
 export class FormattersComponent {
   currentText: string = '';
   selectedColor: string = '#000000';
+  charCount:number=0;
+  wordCount:number=0;
+    private subscriptions: Subscription = new Subscription();
+  ngOnInit():void {
+     this.subscriptions.add(this.textService.charCount$.subscribe(count=>{
+      this.charCount=count;
+     }));
 
+     this.subscriptions.add(this.textService.wordCount$.subscribe(count=>{
+      this.wordCount=count;
+     }));
+  }
   constructor(
     private textService: TextService,
     private formattingService: FormattingService
@@ -41,8 +53,17 @@ export class FormattersComponent {
   }
 
   capitalizeWord(): void {
-    const capitalizedText = this.currentText.replace(/\b\w/g, char => char.toUpperCase());
+    const capitalizedText = this.currentText.toUpperCase();
     this.textService.updateText(capitalizedText);
+  }
+  //  capitalizeWord(): void {
+  //   const capitalizedText = this.currentText.replace(/\b\w/g, char => char.toUpperCase());
+  //   this.textService.updateText(capitalizedText);
+  // }
+
+
+   clearAll(): void {
+    this.textService.updateText('');
   }
 
   // Styling functions

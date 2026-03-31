@@ -15,8 +15,8 @@ import { FormattingService } from '../../services/formatting.service';
 export class TextDisplayComponent implements OnInit, OnDestroy {
   inputText: string = '';
   outputText: string = '';
-  wordCount: number = 0;
-  charCount: number = 0;
+  // wordCount: number = 0;
+  // charCount: number = 0;
   formatting: any = {
     isBold: false,
     isItalic: false,
@@ -41,19 +41,7 @@ export class TextDisplayComponent implements OnInit, OnDestroy {
       })
     );
     
-    // Subscribe to word count
-    this.subscriptions.add(
-      this.textService.wordCount$.subscribe(count => {
-        this.wordCount = count;
-      })
-    );
-    
-    // Subscribe to char count
-    this.subscriptions.add(
-      this.textService.charCount$.subscribe(count => {
-        this.charCount = count;
-      })
-    );
+  
     
     // Subscribe to formatting changes
     this.subscriptions.add(
