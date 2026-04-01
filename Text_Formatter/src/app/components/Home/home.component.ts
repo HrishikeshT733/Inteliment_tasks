@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormattersComponent } from '../formatter/formatter.component';
 import { TextDisplayComponent } from '../text-display/text-display.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 
 @Component({
