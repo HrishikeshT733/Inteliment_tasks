@@ -1,2 +1,54 @@
-<p>api works!</p>
-<a routerLink="/home">TextFormatter</a>
+
+
+
+    <div class="container">
+      <div class="left-panel">
+        <div class="input-field">
+          <label>User Id :- </label>
+          <input type="text" [(ngModel)]="userId" placeholder="Enter ID">
+        </div>
+
+        <div class="resource-buttons">
+          <button (click)="fetch('comments')">Comments</button>
+          <button (click)="fetch('albums')">Albums</button>
+          <button (click)="fetch('photos')">Photos</button>
+          <button (click)="fetch('todos')">Todos</button>
+        </div>
+
+        <div class="crud-buttons">
+          <div class="row">
+            <button class="dark-btn" (click)="onDelete()">Delete</button>
+            <button class="dark-btn" (click)="onUpdate()">Update</button>
+            <button class="dark-btn create-btn" (click)="onCreate()">Create</button>
+          </div>
+          
+        </div>
+
+        <div class="input-field body-input">
+          <label>Input Body :- </label>
+          <input type="text" [(ngModel)]="inputBody">
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="error-box">
+          <span class="label">Error Msg</span>
+          <p class="error-text">{{ errorMsg }}</p>
+        </div>
+
+        <div class="response-box">
+          <span class="label">Response Data</span>
+          <div class="scroll-content">
+            <div *ngIf="responseData?.url" class="img-data">
+              <img [src]="responseData.url" alt="User Image">
+            </div>
+
+            <div *ngIf="responseData && !responseData.url">
+              <div *ngFor="let item of responseData | keyvalue">
+                <p class="data-text"><strong>{{ item.key }}</strong> : {{ item.value }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
