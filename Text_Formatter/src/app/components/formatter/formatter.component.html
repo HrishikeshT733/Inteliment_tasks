@@ -1,21 +1,21 @@
 <div class="formatters-container">
   
-  <div class="formatters-section">
+  <div class="formatters-sectionA">
    <div class="counters">
       <div class="counter">
         <span class="counter-label">Word Count:</span>
         <span class="counter-value">{{ wordCount }}</span>
       </div>
       <div class="counter">
-        <span class="counter-label">Character Count:</span>
+        <span class="counter-label">Char &nbsp;Count:</span>
         <span class="counter-value">{{ charCount }}</span>
       </div>
     </div>
     </div>
   
-  <div class="formatters-section">
+  <div class="formatters-sectionB">
    
-    <div class="button-group">
+    <div class="button-groupA">
        <button class="btn-formatter" (click)="clearAll()">
         Clear All
       </button>
@@ -35,11 +35,11 @@
         Remove Styling
       </button>
     </div>
-  </div>
+  
 
-  <div class="formatters-section">
-    <h4>Text Styling</h4>
-    <div class="button-group">
+  
+    <br>
+    <div class="button-groupB">
       <button class="btn-style" (click)="toggleBold()">
         <strong>B</strong>
       </button>
@@ -51,7 +51,7 @@
       </button>
       
       <div class="color-picker">
-        <label for="colorPicker">Color:</label>
+        <!-- <label for="colorPicker">Color:</label> -->
         <input 
           type="color" 
           id="colorPicker" 
@@ -62,9 +62,10 @@
       </div>
       
       <div class="font-size-controls">
+         <button class="btn-size" (click)="increaseFontSize()">+</button>
+       
+        <!-- <span class="font-size-label">Font Size</span> -->
         <button class="btn-size" (click)="decreaseFontSize()">-</button>
-        <span class="font-size-label">Font Size</span>
-        <button class="btn-size" (click)="increaseFontSize()">+</button>
       </div>
     </div>
   </div>

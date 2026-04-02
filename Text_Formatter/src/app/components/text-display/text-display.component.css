@@ -1,7 +1,8 @@
 .text-display-container {
-  background: white;
-  border-radius: 12px;
+  background: rgb(204, 198, 198);
+  width: 450px;
   padding: 20px;
+  height: 435px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
@@ -19,7 +20,7 @@ h3 {
   width: 95.5%;
   padding: 12px;
   border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  
   font-size: 14px;
   font-family: inherit;
   resize: vertical;
@@ -60,7 +61,7 @@ h3 {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 6px;
+ 
   cursor: pointer;
   font-size: 14px;
   transition: background 0.3s;
@@ -74,7 +75,7 @@ h3 {
   min-height: 150px;
   padding: 12px;
   background: #f8f9fa;
-  border-radius: 8px;
+  
   border: 2px solid #e0e0e0;
   word-wrap: break-word;
   transition: all 0.3s;
