@@ -33,7 +33,7 @@
 }
 
 /* Optional: Add active route styling */
-.horizontal-list li a.active {
-  background: rgba(255, 255, 255, 0.2);
+ .horizontal-list li a.active {
+  background: rgba(8, 8, 8, 0.2)!important;
   border-radius: 6px;
-}
+} 

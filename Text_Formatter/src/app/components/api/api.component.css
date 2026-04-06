@@ -31,3 +31,11 @@
     .error-text { color: red; font-size: 13px; margin: 0; }
     .data-text { font-size: 14px; margin: 4px 0; }
     .img-data img { max-width: 100%; border-radius: 4px; }
+     .data-container {
+    display: flex;
+    gap: 10px; /* Space between key and value */
+  }
+  .data-key {
+    font-weight: bold;
+    min-width: 100px; /* Aligns values at the same spot */
+  }

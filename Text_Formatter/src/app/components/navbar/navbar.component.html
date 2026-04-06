@@ -1,8 +1,9 @@
 <nav>
   <ul class="horizontal-list">
     <li>
-      <a [routerLink]="['/']" 
+      <a [routerLink]="['/home']" 
          routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}"
          >
         TextFormatter
       </a>

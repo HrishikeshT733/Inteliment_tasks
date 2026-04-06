@@ -56,6 +56,6 @@ button {
   }
 }
 
-.home-container, .text-display-container, .formatters-container {
+.home-container, .text-display-container, .formatters-container ,.container{
   animation: fadeIn 0.5s ease-out;
 }

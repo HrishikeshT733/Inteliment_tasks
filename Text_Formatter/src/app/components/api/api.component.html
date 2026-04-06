@@ -46,7 +46,12 @@
 
             <div *ngIf="responseData && !responseData.url">
               <div *ngFor="let item of responseData | keyvalue">
-                <p class="data-text"><strong>{{ item.key }}</strong> : {{ item.value }}</p>
+                <!-- <p class="data-text"><strong>{{ item.key }}</strong> : {{ item.value }}</p> -->
+
+                <div class="data-container">
+  <span class="data-key">{{ item.key }}</span>
+  <span class="data-value">: {{ item.value }}</span>
+</div>
               </div>
             </div>
           </div>
