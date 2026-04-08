@@ -1,0 +1,52 @@
+1. CREATE Number Set (JSON)
+text
+POST http://127.0.0.1:8000/api/numbers/create/
+Content-Type: application/json
+
+{
+    "name": "Sales Data Q1",
+    "numbers": [15000, 22000, 18000, 25000, 21000, 19000]
+}
+
+2.POST http://127.0.0.1:8000/api/numbers/csv/
+Content-Type: multipart/form-data
+
+file: upload CSV file
+name: "CSV Upload Test"
+
+3.GET http://127.0.0.1:8000/api/numbers/
+4.GET http://127.0.0.1:8000/api/numbers/1/
+5.PUT http://127.0.0.1:8000/api/numbers/1/update/
+Content-Type: application/json
+
+{
+    "name": "Updated Q1 Data",
+    "numbers": [20000, 25000, 30000, 35000, 40000]
+}
+6.PATCH http://127.0.0.1:8000/api/numbers/1/partial/
+Content-Type: application/json
+
+{
+    "numbers": [100, 200, 300, 400, 500]
+}
+
+7.PATCH http://127.0.0.1:8000/api/numbers/1/partial/
+Content-Type: application/json
+
+{
+    "name": "Renamed Data Set"
+}
+
+8.GET http://127.0.0.1:8000/api/analysis/1/
+
+9.GET http://127.0.0.1:8000/api/analysis/
+
+10.POST http://127.0.0.1:8000/api/compare/
+Content-Type: application/json
+
+{
+    "id1": 1,
+    "id2": 2
+}
+
+11.DELETE http://127.0.0.1:8000/api/numbers/1/delete/
